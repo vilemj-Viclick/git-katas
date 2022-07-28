@@ -26,9 +26,8 @@ Run `source setup.sh` (or `.\setup.ps1` in PowerShell) to setup the exercise.
 11. Push your change. Notice that they are rejected by the remote
 12. Run the command `git fetch` to retrieve the changes from the fake remote
 13. Run `git status` to see how your `master` branch and the remote `master` branch have diverged
-12. Run `tig refs`. Observe the problem.
+12. Run `tig --all`. Observe the problem.
     1. Look at the difference between the remote tracking branch and the local branch.
-    2. NOTE: Write down the concepts we want to verify here. The thoughts we want attendees to have.
 13. What are the options now?
     1. git pull ...
     2. ...
