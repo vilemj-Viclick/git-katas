@@ -17,6 +17,7 @@ Run `source setup.sh` (or `.\setup.ps1` in PowerShell) to setup the exercise.
 3. Add a line of text to `README.md`
 4. Commit the change 
 5. Run `tig --all` and notice how your local master branch relates to the remote master branch
+6. -- BREAKPOINT --
 6. Push the change to the remote using the command `git push`
 7. Run `tig --all` to see that you are up-to-date
 8. Add another line of text to `README.md`
@@ -24,10 +25,12 @@ Run `source setup.sh` (or `.\setup.ps1` in PowerShell) to setup the exercise.
 10. Run the command `../fitzgerald-pushes-before-we-do.sh` to simulate a collaborator delivering changes to the fake remote
     1. We will want to show here, that a change has been made to the remote, but the local repo has no idea. No remote tracking branch update. Nothing.
 11. Push your change. Notice that they are rejected by the remote
+6. -- BREAKPOINT --
 12. Run the command `git fetch` to retrieve the changes from the fake remote
 13. Run `git status` to see how your `master` branch and the remote `master` branch have diverged
 12. Run `tig --all`. Observe the problem.
     1. Look at the difference between the remote tracking branch and the local branch.
+6. -- BREAKPOINT --
 13. What are the options now?
     1. git pull ...
     2. ...

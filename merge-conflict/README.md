@@ -17,6 +17,7 @@ Both changes need to be in master when you're done.
 2. What does `git status` now report.
 3. Fix the conflict with your favorite editor.
 4. Follow the instructions in `git status` to complete the merge.
+6. -- BREAKPOINT --
 5. What does `tig --all` show?
    1. Look at the merge commit.
    2. Who's the author of the merge commit?
@@ -29,6 +30,10 @@ Both changes need to be in master when you're done.
    1. Let's make it linear like we did with `pull --rebase`
    2. Instead of merging _that branch_ into master with a merge commit, we'll need to merge it using a fast-forward strategy. And in order to do taht we first need to redo all our changes on top of the latest commit in master.
 3. What do I need to do before I use `git rebase`?
+4. Rebase the branch
+6. -- BREAKPOINT --
+4. What needs to be done after rebase?
+5. Do what needs to be done.
 
 ## Relevant commands
 - `git merge`
