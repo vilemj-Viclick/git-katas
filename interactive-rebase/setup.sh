@@ -34,7 +34,7 @@ git checkout -b tabview
 
 git commit --allow-empty -m "[Temp] Fix imports of CSS properties typings" --author "Someone Else <someone@else.com>"
 
-echo "export const TabView = () => {" > $tabview_file_name
+echo "export const tabview = () => {" > $tabview_file_name
 echo "  // custom implementation" >> $tabview_file_name
 echo "};" >> $tabview_file_name
 git add $tabview_file_name
@@ -45,7 +45,12 @@ sed -i.orig -E "s/\/\/\ custom\ implementation/return (\n    <Inline {\/* propsy
 rm *orig
 git add $inline_file_name $tabview_file_name
 git commit -m "Rewrite spacing in Inline with flex gap"
-git commit --allow-empty -m "[Squash] Fix typo in TabView"
+
+
+sed -i.orig -E "s/tabview/TabView/" $tabview_file_name
+rm *orig
+git add $tabview_file_name
+git commit -m "[Squash] Fix typo in TabView" -m $'What a typo! Unbelievable, how could I ever allowed it to get into the\nhistory. The least I can do is to rant in this commit message.' -m $'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nincididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis\nconvallis tellus. Morbi tincidunt ornare massa eget egestas. Cras ornare arcu dui\nvivamus arcu felis bibendum. Enim lobortis scelerisque fermentum dui faucibus in\nornare quam. Eu augue ut lectus arcu bibendum at varius. Gravida arcu ac tortor\ndignissim convallis aenean et tortor. Tempus quam pellentesque nec nam aliquam sem et\ntortor consequat. Egestas diam in arcu cursus euismod. Sed arcu non odio euismod\nlacinia at quis risus sed.'
 
 sed -i.orig -E "s/\/\/\ legacy\ implementation/\/\/\ implementation\ with\ flex\ gap/" $stack_file_name
 rm *orig
